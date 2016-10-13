@@ -6,7 +6,9 @@ export default class Header extends React.Component {
     return (
       <div>
         <h1>Hello World!</h1>
-        <SearchBar />
+        <SearchBar
+          handleSearchParams={this.props.handleSearchParams}
+        />
       </div>
     );
   }

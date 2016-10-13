@@ -9,7 +9,6 @@ export default class SearchBar extends React.Component {
   }
 
   updateSearchValue(e) {
-    e.preventDefault();
     clearTimeout(this.autoSearchDelay);
 
     this.setState({
@@ -21,17 +20,24 @@ export default class SearchBar extends React.Component {
       700);
   }
 
-  filter() {
-    alert(this.state.value);
+  filter(e) {
+    if (e) {
+      e.preventDefault();
+    }
+
+    clearTimeout(this.autoSearchDelay);
+    this.props.handleSearchParams(this.state.value);
   }
 
   render() {
-    const updateSearchValue = this.updateSearchValue.bind(this);
-    const filter = this.filter.bind(this);
-
     return (
-      <form onSubmit={filter}>
-        <input value={this.state.value} onChange={updateSearchValue}/>
+      <form
+        onSubmit={this.filter.bind(this)}
+      >
+        <input
+          value={this.state.value}
+          onChange={this.updateSearchValue.bind(this)}
+        />
         <button>Search</button>
       </form>
     );
