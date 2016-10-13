@@ -1,9 +1,14 @@
 import React from "react";
+import Header from "./components/header/Header";
+import PhotoGrid from "./components/PhotoGrid";
 
 export default class Layout extends React.Component {
   render() {
     return (
-      <h1>Hello World!</h1>
+      <div>
+        <Header />
+        <PhotoGrid />
+      </div>
     );
   }
 }
