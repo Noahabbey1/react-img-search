@@ -3,21 +3,22 @@ import React from "react";
 export default class SearchBar extends React.Component {
   constructor() {
     super();
+    this.autoSearchDelay = 500;
     this.state = {
       value: ""
     };
   }
 
   updateSearchValue(e) {
-    clearTimeout(this.autoSearchDelay);
+    clearTimeout(this.autoSearchTimer);
 
     this.setState({
       value: e.target.value
     });
 
-    this.autoSearchDelay = setTimeout(
+    this.autoSearchTimer = setTimeout(
       this.filter.bind(this),
-      700);
+      this.autoSearchDelay);
   }
 
   filter(e) {
@@ -25,8 +26,16 @@ export default class SearchBar extends React.Component {
       e.preventDefault();
     }
 
-    clearTimeout(this.autoSearchDelay);
-    this.props.handleSearchParams(this.state.value);
+    clearTimeout(this.autoSearchTimer);
+    this.props.handleSearchRequest(this.state.value);
+  }
+
+  renderSpinner() {
+    if (this.props.isRequestingPhotos) {
+      return (
+        <i className="loading-icon fa fa-spinner fa-spin fa-fw"></i>
+      );
+    }
   }
 
   render() {
@@ -35,6 +44,7 @@ export default class SearchBar extends React.Component {
         className="search-bar"
         onSubmit={this.filter.bind(this)}
       >
+        {this.renderSpinner()}
         <input
           className="search-bar__input"
           placeholder="Insert your keywords here!"

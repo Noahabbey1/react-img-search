@@ -1,4 +1,12 @@
 .search-bar {
+  position: relative;
+  .loading-icon {
+    display: block;
+    position: absolute;
+    left: -35px;
+    font-size: 1.3em;
+    line-height: 1.3em;
+  }
   .search-bar__input {
     padding: 10px;
     border-radius: 5px 0px 0px 5px;
