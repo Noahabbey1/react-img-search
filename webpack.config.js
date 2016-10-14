@@ -1,10 +1,5 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var autoprefixer = require("autoprefixer");
-var isDev = true;
-
-var cssLoaderSetup = isDev ? 'css-loader?sourceMap' : 'css-loader?minimize';
-var sassLoaderSetup = isDev ? 'sass-loader?sourceMap' : 'sass-loader';
-var postcssLoaderStup = isDev ? 'postcss-loader?sourceMap=inline' : 'postcss-loader';
 
 module.exports = {
   entry: {
@@ -28,7 +23,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style-loader', String(cssLoaderSetup+'!'+postcssLoaderStup+'!'+sassLoaderSetup), {publicPath: '../bundle/'})
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?minimize!postcss-loader!sass-loader', {publicPath: '../bundle/'})
       },
       {
         test: /\.(png|jpg)$/,

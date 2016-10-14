@@ -39,6 +39,8 @@ export default class SearchBar extends React.Component {
   }
 
   render() {
+    let isSearchDisabled = this.state.value.length === 0;
+
     return (
       <form
         className="search-bar"
@@ -51,7 +53,11 @@ export default class SearchBar extends React.Component {
           value={this.state.value}
           onChange={this.updateSearchValue.bind(this)}
         />
-        <button className="search-bar__button">
+        <button
+          className="search-bar__button"
+          disabled={isSearchDisabled}
+        >
+          <i className="fa fa-search"></i>
           Search
         </button>
       </form>
