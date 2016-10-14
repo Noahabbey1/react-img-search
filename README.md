@@ -3,7 +3,7 @@ A simple react app/component image carousel that can be fetched by APIs.
 ## How to run
 All you gotta do is:
 
-1. Clone the project `git clone git@github.com:jhonnymichel/react-flickr-carousel.git`
+1. Clone the project `git clone git@github.com:jhonnymichel/react-img-search.git`
 2. Get to the directory `cd path/to/the/directory`
 3. Install dependencies `npm install`
 
