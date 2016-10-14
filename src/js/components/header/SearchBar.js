@@ -3,7 +3,7 @@ import React from "react";
 export default class SearchBar extends React.Component {
   constructor() {
     super();
-    this.autoSearchDelay = 500;
+    this.autoSearchDelay = 400;
     this.state = {
       value: ""
     };

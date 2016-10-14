@@ -1,4 +1,4 @@
-A simple react app/component image carousel that can be fetched by APIs.
+A simple react app/component image search engine using flickr's api.
 
 ## How to run
 All you gotta do is:
