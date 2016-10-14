@@ -32,13 +32,18 @@ export default class SearchBar extends React.Component {
   render() {
     return (
       <form
+        className="search-bar"
         onSubmit={this.filter.bind(this)}
       >
         <input
+          className="search-bar__input"
+          placeholder="Insert your keywords here!"
           value={this.state.value}
           onChange={this.updateSearchValue.bind(this)}
         />
-        <button>Search</button>
+        <button className="search-bar__button">
+          Search
+        </button>
       </form>
     );
   }

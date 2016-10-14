@@ -35,7 +35,6 @@
     "node-sass": "^3.10.1",
     "postcss-loader": "^0.13.0",
     "react": "^15.3.2",
-    "react-addons-css-transition-group": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-loader": "^2.4.0",
     "sass-loader": "^4.0.2",
