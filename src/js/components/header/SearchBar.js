@@ -12,9 +12,12 @@ export default class SearchBar extends React.Component {
   updateSearchValue(e) {
     clearTimeout(this.autoSearchTimer);
 
-    this.setState({
-      value: e.target.value
-    });
+    let value = e.target.value;
+    this.setState({ value });
+
+    if (value.length === 0) {
+      return;
+    }
 
     this.autoSearchTimer = setTimeout(
       this.filter.bind(this),

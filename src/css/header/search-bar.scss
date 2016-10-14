@@ -16,6 +16,7 @@
     }
   }
   .search-bar__button {
+    transition: opacity 200ms ease-out;
     padding: 10px;
     border-radius: 0px 5px 5px 0px;
     border: none;
@@ -25,5 +26,8 @@
     .fa {
       margin-right: 5px;
     }
+  }
+  .search-bar__button[disabled] {
+    opacity: .15;
   }
 }
