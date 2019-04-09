@@ -5,7 +5,7 @@ export default function Header ({ handleSearchRequest, isRequestingPhotos }) {
   return (
     <div className="header">
       <h1 className="header__title">
-        FLICKR SEARCH!
+        PEXELS SEARCH!
       </h1>
       <SearchBar
         handleSearchRequest={handleSearchRequest}
@@ -19,8 +19,7 @@ $.ajax({
 ,
   method: "GET",
   headers: {
-    "Authorization":
-       YOUR_API_KEY
+    Authorization: 563492ad6f917000010000019d49185904c64a929c81f162d12a17c5
   },
 }).then(function(response) {
   console.log(response);
