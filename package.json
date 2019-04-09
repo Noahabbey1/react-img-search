@@ -1,46 +1,23 @@
 {
-  "name": "react-image-search",
-  "version": "1.0.0",
-  "description": "small project built to have fun with flickr api and react",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --watch",
-    "server": "webpack-dev-server --content-base src --inline --hot",
-    "build": "webpack && webpack-dev-server --content-base src --inline"
-  },
-  "keywords": [
-    "react",
-    "js",
-    "animations",
-    "carousel",
-    "flickr",
-    "api"
-  ],
-  "author": "Jhonny Michel",
-  "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^6.5.1",
-    "babel-core": "^6.17.0",
-    "babel-loader": "^6.2.5",
-    "babel-preset-es2015": "^6.16.0",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-0": "^6.16.0",
-    "css-loader": "^0.25.0",
-    "eslint": "^3.7.1",
-    "eslint-config-google": "^0.6.0",
-    "eslint-plugin-react": "^6.4.1",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "file-loader": "^0.9.0",
-    "node-sass": "^3.10.1",
-    "postcss-loader": "^0.13.0",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "react-loader": "^2.4.0",
-    "sass-loader": "^4.0.2",
-    "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7",
-    "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.2"
+  page: 1,
+  per_page: 15,
+  total_results: 236,
+  url: "https://www.pexels.com/search/example%20query/",
+  next_page: "https://api.pexels.com/v1/search/?page=2&per_page=15&query=example+query"
+  photos: [{
+    width: 1000,
+    height: 1000,
+    url: "https://www.pexels.com/photo/12345",
+    photographer: "Name",
+    src: {
+      original: "https://*.jpg",
+      large: "https://*.jpg",
+      large2x: "https://*.jpg",
+      medium: "https://*.jpg",
+      small: "https://*.jpg",
+      portrait: "https://*.jpg",
+      landscape: "https://*.jpg",
+      tiny: "https://*.jpg"
+    }, (NEXT PHOTOS)]
   }
 }
