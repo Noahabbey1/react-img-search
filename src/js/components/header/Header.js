@@ -14,3 +14,17 @@ export default function Header ({ handleSearchRequest, isRequestingPhotos }) {
     </div>
   );
 }
+$.ajax({
+  url: 'https://api.pexels.com/v1/search?query=example+query&per_page=15&page=1'
+,
+  method: "GET",
+  headers: {
+    "Authorization":
+       YOUR_API_KEY
+  },
+}).then(function(response) {
+  console.log(response);
+}).catch(function(err) {
+  console.error(err);
+});
+
