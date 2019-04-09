@@ -15,11 +15,11 @@ export default function Header ({ handleSearchRequest, isRequestingPhotos }) {
   );
 }
 $.ajax({
-  url: 'https://api.pexels.com/v1/search?query=example+query&per_page=15&page=1'
+  url: 'https://api.pexels.com/v1/search?query=example+query&per_page=20&page=1'
 ,
   method: "GET",
   headers: {
-    Authorization: 563492ad6f917000010000019d49185904c64a929c81f162d12a17c5
+    Authorization: '563492ad6f917000010000019d49185904c64a929c81f162d12a17c5'
   },
 }).then(function(response) {
   console.log(response);
