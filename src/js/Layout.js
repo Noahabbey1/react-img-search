@@ -12,8 +12,8 @@ export default class Layout extends React.Component {
   }
 
   handleSearchRequest(searchValue) {
-    const devApiKey = "f7b187b2ffaf8273ce3b09965fb72b7a";
-    let url = `https://api.flickr.com/services/rest/?api_key=${devApiKey}&method=flickr.photos.search&format=json&nojsoncallback=1&&per_page=50&page=1&text=${searchValue}`;
+    const devApiKey = "563492ad6f917000010000019d49185904c64a929c81f162d12a17c5";
+    let url = `https://api.pexels.com/v1/search?query=example+query&per_page=20&page=1`;
 
     this.setState({
       isRequestingPhotos: true
