@@ -3,7 +3,7 @@ import React from "react";
 export default function PhotoGrid ({ photosData }) {
 
   let photos = photosData.map(photo => {
-    let src = `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`;
+    let src = "https://www.pexels.com/photo/12345";
     return (
       <div
         className="photo-grid__photo-container"
