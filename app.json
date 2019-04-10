@@ -1,0 +1,21 @@
+{
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/Noahabbey1/react-img-search.git"
+    }
+  ],
+  "env": {
+    "": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "name": "react-img-search",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
